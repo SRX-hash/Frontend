@@ -65,7 +65,7 @@ export const Navbar: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <button
-              onClick={() => navigate('/search')}
+              onClick={() => navigate('/login?role=buyer')}
               className="bg-primary-500 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-600 hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-200 transform hover:scale-[1.02] active:scale-95"
             >
               Explore Fabrics
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
             ))}
             <div className="pt-4">
               <button
-                onClick={() => navigate('/search')}
+                onClick={() => navigate('/login?role=buyer')}
                 className="w-full bg-primary-500 text-white px-4 py-3 rounded-lg text-base font-bold hover:bg-primary-600 transition-colors shadow-md"
               >
                 Explore Fabrics

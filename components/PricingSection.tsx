@@ -44,7 +44,7 @@ export const PricingSection: React.FC = () => {
                 </ul>
 
                 <button 
-                    onClick={() => navigate(tier.variant === 'buyer' ? '/search' : '/manufacturer-dashboard')}
+                    onClick={() => navigate(tier.variant === 'buyer' ? '/login?role=buyer' : '/login?role=manufacturer')}
                     className={`w-full py-4 rounded-lg font-bold transition-all ${tier.variant === 'buyer' ? 'bg-primary-600 hover:bg-primary-500 text-white shadow-lg shadow-primary-900/50' : 'bg-accent-600 hover:bg-accent-500 text-white shadow-lg shadow-accent-900/50'}`}
                 >
                     {tier.cta}

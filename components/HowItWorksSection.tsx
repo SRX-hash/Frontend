@@ -77,7 +77,7 @@ export const HowItWorksSection: React.FC = () => {
         <Reveal delay={500}>
           <div className="mt-20 text-center">
              <button 
-                onClick={() => navigate(activeTab === 'buyer' ? '/search' : '/manufacturer-dashboard')}
+                onClick={() => navigate(activeTab === 'buyer' ? '/login?role=buyer' : '/login?role=manufacturer')}
                 className={`px-8 py-3 text-white rounded-full font-bold shadow-lg transition-all duration-200 transform hover:scale-[1.02] flex items-center mx-auto ${buttonClass}`}
               >
                 {activeTab === 'buyer' ? 'Explore as Buyer' : 'Register as Manufacturer'} 

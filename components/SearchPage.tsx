@@ -8,11 +8,13 @@ import { SearchFabricCard } from './SearchFabricCard';
 import { SelectionPanel } from './SelectionPanel';
 import { MockupModal } from './MockupModal';
 import { TechpackModal } from './TechpackModal';
-import { Layers, SearchX, ArrowRight } from 'lucide-react';
+import { Layers, SearchX, ArrowRight, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 export const SearchPage: React.FC = () => {
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState<FabricFilter>({ fabrication: '', type: '', gsmRange: '' });
   const [selectedFabrics, setSelectedFabrics] = useState<Fabric[]>([]);
@@ -67,7 +69,6 @@ export const SearchPage: React.FC = () => {
 
   const applyQuickFilter = (key: keyof FabricFilter, value: string) => {
     resetAllFilters();
-    // Small timeout to allow reset to happen visually if needed, but React batches updates usually
     setTimeout(() => {
         setFilters(prev => ({ ...prev, [key]: value }));
     }, 0);
@@ -84,8 +85,17 @@ export const SearchPage: React.FC = () => {
                 </div>
                 <span className="text-lg font-extrabold tracking-tight text-neutral-900">KnitVision</span>
             </div>
-            <div className="text-sm font-medium text-neutral-500 bg-neutral-50 px-3 py-1 rounded-full border border-neutral-200">
-                Logged in as <span className="text-neutral-900 font-bold">Buyer</span>
+            <div className="flex items-center space-x-4">
+                <div className="text-sm font-medium text-neutral-500 bg-neutral-50 px-3 py-1 rounded-full border border-neutral-200">
+                    Logged in as <span className="text-neutral-900 font-bold">{user?.name || 'Buyer'}</span>
+                </div>
+                <button 
+                    onClick={logout} 
+                    className="text-neutral-400 hover:text-red-500 transition-colors"
+                    title="Logout"
+                >
+                    <LogOut size={18} />
+                </button>
             </div>
         </div>
       </nav>

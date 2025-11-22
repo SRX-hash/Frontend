@@ -23,7 +23,7 @@ export const FabricPreviewSection: React.FC = () => {
             </div>
             <div className="mt-6 md:mt-0">
               <button 
-                  onClick={() => navigate('/search')}
+                  onClick={() => navigate('/login?role=buyer')}
                   className="inline-flex items-center text-primary-600 font-bold hover:text-primary-700 transition-colors group"
               >
                 View Fabric Library <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform" />

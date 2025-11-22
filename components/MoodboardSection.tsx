@@ -43,7 +43,7 @@ export const MoodboardSection: React.FC = () => {
             </ul>
 
             <Reveal delay={500}>
-              <button onClick={() => navigate('/search')} className="bg-neutral-900 text-white px-8 py-3.5 rounded-full font-bold hover:bg-neutral-800 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+              <button onClick={() => navigate('/login?role=buyer')} className="bg-neutral-900 text-white px-8 py-3.5 rounded-full font-bold hover:bg-neutral-800 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
                 Start Moodboard
               </button>
             </Reveal>

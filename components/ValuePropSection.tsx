@@ -1,9 +1,12 @@
+
 import React from 'react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { VALUE_PROP_HIGHLIGHTS } from '../constants';
+import { useNavigate } from 'react-router-dom';
 
 export const ValuePropSection: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-24 bg-white border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +20,7 @@ export const ValuePropSection: React.FC = () => {
               <p className="relative text-lg font-light text-neutral-600 leading-relaxed mb-8">
                 You don’t need scattered folders, sample chaos, or outdated vendor lists. Our platform brings everything together — fabric visuals, technical details, and collaboration — in one clean digital experience.
               </p>
-              <button onClick={() => alert('Explore')} className="relative inline-flex items-center font-bold text-primary-600 hover:text-primary-700 transition-colors">
+              <button onClick={() => navigate('/login?role=buyer')} className="relative inline-flex items-center font-bold text-primary-600 hover:text-primary-700 transition-colors">
                 Start Exploring Fabrics <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </div>

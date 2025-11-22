@@ -36,11 +36,11 @@ export const HeroSection: React.FC = () => {
             
             <Reveal delay={400}>
                 <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                <button onClick={() => navigate('/search')} className="w-full sm:w-auto px-8 py-4 bg-primary-500 text-white rounded-full font-bold shadow-lg shadow-primary-500/30 hover:bg-primary-600 hover:scale-105 hover:shadow-xl transition-all duration-200 flex items-center justify-center">
+                <button onClick={() => navigate('/login?role=buyer')} className="w-full sm:w-auto px-8 py-4 bg-primary-500 text-white rounded-full font-bold shadow-lg shadow-primary-500/30 hover:bg-primary-600 hover:scale-105 hover:shadow-xl transition-all duration-200 flex items-center justify-center">
                     Explore Fabrics
                     <ArrowRight size={18} className="ml-2" />
                 </button>
-                <button onClick={() => navigate('/manufacturer-dashboard')} className="w-full sm:w-auto px-8 py-4 bg-white text-neutral-700 border border-neutral-200 rounded-full font-semibold hover:border-neutral-400 hover:bg-neutral-50 hover:text-neutral-900 transition-all duration-200 shadow-sm">
+                <button onClick={() => navigate('/login?role=manufacturer')} className="w-full sm:w-auto px-8 py-4 bg-white text-neutral-700 border border-neutral-200 rounded-full font-semibold hover:border-neutral-400 hover:bg-neutral-50 hover:text-neutral-900 transition-all duration-200 shadow-sm">
                     Join as Manufacturer
                 </button>
                 </div>

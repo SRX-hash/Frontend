@@ -23,13 +23,13 @@ export const FinalCTASection: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button 
-                onClick={() => navigate('/search')}
+                onClick={() => navigate('/login?role=buyer')}
                 className="bg-white text-primary-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-black/10 hover:bg-neutral-50 hover:scale-105 transition-all duration-200"
             >
                 Explore Fabrics Now
             </button>
             <button 
-                onClick={() => navigate('/manufacturer-dashboard')}
+                onClick={() => navigate('/login?role=manufacturer')}
                 className="bg-transparent border border-white/40 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 hover:border-white transition-colors"
             >
                 List Your Fabrics Today

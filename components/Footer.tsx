@@ -1,7 +1,11 @@
+
 import React from 'react';
 import { Layers } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-white/80 backdrop-blur-md border-t border-neutral-200 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,8 +22,8 @@ export const Footer: React.FC = () => {
             <a href="#" className="hover:text-primary-600 transition-colors">About</a>
             <a href="#" className="hover:text-primary-600 transition-colors">FAQs</a>
             <a href="#" className="hover:text-primary-600 transition-colors">Contact</a>
-            <a href="#" className="hover:text-primary-600 transition-colors">Login</a>
-            <a href="#" className="hover:text-primary-600 transition-colors">Register</a>
+            <button onClick={() => navigate('/login')} className="hover:text-primary-600 transition-colors">Login</button>
+            <button onClick={() => navigate('/login')} className="hover:text-primary-600 transition-colors">Register</button>
           </div>
         </div>
         
